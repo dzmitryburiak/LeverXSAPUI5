@@ -1,9 +1,9 @@
 <mvc:View
 xmlns="sap.m"
-xmlns:mvc="sap.ui.core.mvc">
+xmlns:mvc="sap.ui.core.mvc"
+controllerName="lx.sapui5.demoapp.controller.App">
     <VBox class="sapUiResponsiveMargin">
-        <Text text="Hello World" class="sapUiMediumMarginBottom"/>
-        <Image src="https://openui5.org/654aad3012a144881ab07c0bbdd26eb8/phenix_red.svg" height="100px" class="sapUiMediumMarginBottom"/>
-        <Button text="Push me!" type="Emphasized"/>
+        <Input id="nameInput" placeholder="Enter your name" width="250px" class="sapUiMediumMarginBottom" />
+        <Button text="Show greeting" type="Emphasized" press="onButtonPress"/>
     </VBox>
 </mvc:View>
