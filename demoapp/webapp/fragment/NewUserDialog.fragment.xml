@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" >
+   <Dialog
+      id="newUserDialog"
+      class="sapUiResponsiveContentPadding"
+      title="Add new user"
+      afterClose="onAfterCloseDialog">
+        <VBox>
+            <Input id="nameInput" value="{/name}" placeholder="Enter your name" width="250px" class="sapUiTinyMarginBottom" />        
+            <Input id="ageInput" value="{/age}" placeholder="Enter your age" width="250px" class="sapUiMediumMarginBottom" />
+        </VBox>
+        <buttons>
+            <Button text="Add user" type="Emphasized" press="onCreateUserPress" />
+            <Button text="Cancel" press="onCancelPress" />
+        </buttons>
+   </Dialog>
+</core:FragmentDefinition>
