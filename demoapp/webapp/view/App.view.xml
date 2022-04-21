@@ -3,7 +3,23 @@ xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc"
 controllerName="lx.sapui5.demoapp.controller.App">
     <VBox class="sapUiResponsiveMargin">
-        <Input id="nameInput" placeholder="Enter your name" width="250px" class="sapUiMediumMarginBottom" />
-        <Button text="Show greeting" type="Emphasized" press="onButtonPress"/>
+        <Input id="nameInput" value="{/name}" placeholder="Enter your name" width="250px" class="sapUiTinyMarginBottom" />        
+        <Input id="ageInput" value="{/age}" placeholder="Enter your age" width="250px" class="sapUiMediumMarginBottom" />
+        <Button text="Add user" type="Emphasized" press="onButtonPress" class="sapUiMediumMarginBottom" />
+        <List
+            id="usersList"
+            width="250px"
+            items="{/users}">
+            <headerToolbar>
+                <OverflowToolbar>
+                    <content>
+                        <Title text="Users" level="H2" />
+                    </content>
+                </OverflowToolbar>
+            </headerToolbar>
+		    <StandardListItem
+                title="{name}"
+                description="{age}" />
+	    </List>
     </VBox>
 </mvc:View>
