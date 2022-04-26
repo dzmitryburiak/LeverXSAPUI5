@@ -4,17 +4,17 @@
    <Dialog
       id="newUserDialog"
       class="sapUiResponsiveContentPadding"
-      title="New User"
+      title="{i18n>newUserDialogTitle}"
       afterClose="onAfterCloseDialog">
         <VBox>
-            <Label labelFor="nameInput" text="Name"/>
+            <Label labelFor="nameInput" text="{i18n>nameLbl}"/>
             <Input id="nameInput" value="{/name}" width="250px" required="true" class="sapUiTinyMarginBottom" />               
-            <Label labelFor="ageInput" text="Age"/>    
+            <Label labelFor="ageInput" text="{i18n>ageLbl}"/>    
             <Input id="ageInput" value="{/age}" width="250px" required="true" class="sapUiMediumMarginBottom" />
         </VBox>
         <buttons>
-            <Button text="Ok" type="Emphasized" press="onCreateUserPress" />
-            <Button text="Cancel" press="onCancelPress" />
+            <Button text="{i18n>okBtn}" type="Emphasized" press="onCreateUserPress" />
+            <Button text="{i18n>cancelBtn}" press="onCancelPress" />
         </buttons>
    </Dialog>
 </core:FragmentDefinition>

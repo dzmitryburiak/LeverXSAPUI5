@@ -5,7 +5,7 @@
     height="100%"
     displayBlock="true"
     controllerName="lx.sapui5.demoapp.controller.UsersList">
-    <Page title="Users List" class="sapUiResponsiveContentPadding">
+    <Page title="{i18n>listPageTitle}" class="sapUiResponsiveContentPadding">
         <VBox>                        
             <List
                 id="usersList"
@@ -15,10 +15,10 @@
                 <headerToolbar>
                     <OverflowToolbar>
                         <content>
-                            <Title text="Users" level="H2" />
+                            <Title text="{i18n>tableTitle}" level="H2" />
                             <ToolbarSpacer />
-                            <Button text="Create" type="Transparent" press="onAddUserPress"/>                                    
-                            <Button text="Delete" type="Transparent" enabled="{ui>/isUserSelected}" press="onDeleteUserPress"/>
+                            <Button text="{i18n>createBtn}" type="Transparent" press="onAddUserPress"/>                                    
+                            <Button text="{i18n>deleteBtn}" type="Transparent" enabled="{ui>/isUserSelected}" press="onDeleteUserPress"/>
                         </content>
                     </OverflowToolbar>
                 </headerToolbar>

@@ -5,11 +5,11 @@
     height="100%"
     displayBlock="true"
     controllerName="lx.sapui5.demoapp.controller.UserDetails">
-    <Page title="User Details" class="sapUiResponsiveContentPadding">
+    <Page title="{i18n>detailsPageTitle}" class="sapUiResponsiveContentPadding">
 		<f:SimpleForm id="userDisplyForm"
 			editable="false"
 			layout="ResponsiveGridLayout"
-			title="User Info"
+			title="{i18n>formTitle}"
 			labelSpanXL="3"
 			labelSpanL="3"
 			labelSpanM="3"
@@ -24,13 +24,13 @@
 			columnsM="1"
 			singleContainerFullSize="false" >
 			<f:content>
-				<Label labelFor="userName" text="Name" />
+				<Label labelFor="userName" text="{i18n>nameLbl}" />
 				<Text id="userName" text="{name}" />
-				<Label labelFor="age" text="Age" />
+				<Label labelFor="age" text="{i18n>ageLbl}" />
 				<Text  id= "age" text="{age}" />
-				<Label labelFor="country" text="Country" />
-				<Text id="country" text="{contry}" />
-				<Label labelFor="city" text="City" />
+				<Label labelFor="country" text="{i18n>countryLbl}" />
+				<Text id="country" text="{country}" />
+				<Label labelFor="city" text="{i18n>cityLbl}" />
 				<Text id="city" text="{city}" />
 			</f:content>
 		</f:SimpleForm>

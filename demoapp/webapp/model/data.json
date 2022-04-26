@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "name": "Dzmitry",
+            "age": 34,
+            "country": "Turkey",
+            "city": "Alanya"
+        },
+        {
+            "name": "Vasili",
+            "age": 23,
+            "country": "Lithuania",
+            "city": "Vilnius"
+        },
+        {
+            "name": "Aliaksei",
+            "age": 30,
+            "country": "USA",
+            "city": "New York"
+        }
+    ]
+}

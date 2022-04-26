@@ -36,18 +36,17 @@ sap.ui.define([
             var oModel = this.getView().getModel();
             var sName = oModel.getProperty("/name");
             var sAge = oModel.getProperty("/age");
+            var oResourceBundle =  this.getOwnerComponent().getModel("i18n").getResourceBundle();
 
             if (sName && sAge) {
                 var aUsers = oModel.getProperty("/users");
 
                 aUsers.push({ name: sName, age: sAge });
                 oModel.setProperty("/users", aUsers);
-                MessageToast.show(`New user ${sName} ${sAge} y.o. has been created`);
+                MessageToast.show(oResourceBundle.getText("userCreationSuccessMsg", [sName, sAge]));
                 this._oDialog.close();
             } else {
-                MessageBox.error(
-                    "Oops there was a problem, please check your input!"
-                );
+                MessageBox.error(oResourceBundle.getText("inputErrorMsg"));
             }
         },
         onAfterCloseDialog: function () {
