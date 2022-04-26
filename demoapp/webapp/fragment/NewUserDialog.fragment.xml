@@ -4,14 +4,16 @@
    <Dialog
       id="newUserDialog"
       class="sapUiResponsiveContentPadding"
-      title="Add new user"
+      title="New User"
       afterClose="onAfterCloseDialog">
         <VBox>
-            <Input id="nameInput" value="{/name}" placeholder="Enter your name" width="250px" class="sapUiTinyMarginBottom" />        
-            <Input id="ageInput" value="{/age}" placeholder="Enter your age" width="250px" class="sapUiMediumMarginBottom" />
+            <Label labelFor="nameInput" text="Name"/>
+            <Input id="nameInput" value="{/name}" width="250px" required="true" class="sapUiTinyMarginBottom" />               
+            <Label labelFor="ageInput" text="Age"/>    
+            <Input id="ageInput" value="{/age}" width="250px" required="true" class="sapUiMediumMarginBottom" />
         </VBox>
         <buttons>
-            <Button text="Add user" type="Emphasized" press="onCreateUserPress" />
+            <Button text="Ok" type="Emphasized" press="onCreateUserPress" />
             <Button text="Cancel" press="onCancelPress" />
         </buttons>
    </Dialog>

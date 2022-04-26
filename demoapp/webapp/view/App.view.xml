@@ -17,7 +17,7 @@ controllerName="lx.sapui5.demoapp.controller.App">
                                 <content>
                                     <Title text="Users" level="H2" />
                                     <ToolbarSpacer />
-                                    <Button text="Add" type="Transparent" press="onAddUserPress"/>
+                                    <Button text="Create" type="Transparent" press="onAddUserPress"/>
                                 </content>
                             </OverflowToolbar>
                         </headerToolbar>
