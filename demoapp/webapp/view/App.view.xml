@@ -11,13 +11,16 @@ controllerName="lx.sapui5.demoapp.controller.App">
                 <VBox>                        
                     <List
                         id="usersList"
+                        mode="SingleSelectLeft"
+                        selectionChange="onUserSelectionChange"
                         items="{/users}">
                         <headerToolbar>
                             <OverflowToolbar>
                                 <content>
                                     <Title text="Users" level="H2" />
                                     <ToolbarSpacer />
-                                    <Button text="Create" type="Transparent" press="onAddUserPress"/>
+                                    <Button text="Create" type="Transparent" press="onAddUserPress"/>                                    
+                                    <Button text="Delete" type="Transparent" enabled="{ui>/isUserSelected}" press="onDeleteUserPress"/>
                                 </content>
                             </OverflowToolbar>
                         </headerToolbar>
