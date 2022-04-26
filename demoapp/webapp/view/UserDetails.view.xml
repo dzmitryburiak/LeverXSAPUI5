@@ -1,0 +1,38 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    height="100%"
+    displayBlock="true"
+    controllerName="lx.sapui5.demoapp.controller.UserDetails">
+    <Page title="User Details" class="sapUiResponsiveContentPadding">
+		<f:SimpleForm id="userDisplyForm"
+			editable="false"
+			layout="ResponsiveGridLayout"
+			title="User Info"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label labelFor="userName" text="Name" />
+				<Text id="userName" text="{name}" />
+				<Label labelFor="age" text="Age" />
+				<Text  id= "age" text="{age}" />
+				<Label labelFor="country" text="Country" />
+				<Text id="country" text="{contry}" />
+				<Label labelFor="city" text="City" />
+				<Text id="city" text="{city}" />
+			</f:content>
+		</f:SimpleForm>
+    </Page> 
+</mvc:View>

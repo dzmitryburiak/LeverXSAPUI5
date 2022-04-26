@@ -6,21 +6,13 @@ sap.ui.define([
     "sap/ui/core/Fragment"
 ], function (Controller, MessageToast, MessageBox, JSONModel, Fragment) {
     "use strict";
-    return Controller.extend("lx.sapui5.demoapp.controller.App", {
+    return Controller.extend("lx.sapui5.demoapp.controller.UsersList", {
         onInit: function () {
             var oView  = this.getView();
-            var aUsers = [
-                { name: "Dzmitry", age: 34 },
-                { name: "Vasili", age: 23 },
-                { name: "Aliaksei", age: 30 }
-            ];
-            var oDataModel = new JSONModel({ users: aUsers });
             var oUIModel = new JSONModel ({
                 isUserSelected: false
             });
 
-
-            oView.setModel(oDataModel);
             oView.setModel(oUIModel, "ui");
         },
         onAddUserPress: function () {
@@ -88,6 +80,15 @@ sap.ui.define([
         },
         onUserSelectionChange: function (oEvent) {
             this.getView().getModel("ui").setProperty("/isUserSelected", oEvent.getParameter("selected"));
+        },
+        onUserItemPress: function(oEvent) {
+            var oItem = oEvent.getSource();
+            var iIndex = oItem.getBindingContext().getPath().split("/")[2];
+            var oRouter = this.getOwnerComponent().getRouter();
+
+			oRouter.navTo("userDetails", {
+                id: iIndex
+            });
         }
     });
 });

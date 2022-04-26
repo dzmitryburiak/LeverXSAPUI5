@@ -1,6 +1,77 @@
 {
-  "_version": "1.12.0",
-  "sap.app": {
-    "id": "lx.sapui5.demoapp"
-  }
+    "_version": "1.12.0",
+    "sap.app": {
+        "id": "lx.sapui5.demoapp",
+        "type": "application"
+    },
+    "sap.ui5": {
+        "dependencies": {
+            "minUI5Version": "1.100.2",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            
+        },
+        "rootView": {
+			"viewName": "lx.sapui5.demoapp.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "lx.sapui5.demoapp.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "bypassed": {
+                    "target": [
+                        "notFoundTarget"
+                    ]
+                },
+                "async": true
+            },
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "usersList",
+                    "target": [
+                        "usersListTarget"
+                    ]
+                },
+                {
+                    "pattern": "user/{id}",
+                    "name": "userDetails",
+                    "target": [
+                        "userDetailsTarget"
+                    ]
+                }
+            ],
+            "targets": {
+                "usersListTarget": {
+                    "viewName": "UsersList",
+                    "viewId": "usersList",
+                    "viewLevel": 1
+                },
+                "userDetailsTarget": {
+                    "viewName": "UserDetails",
+                    "viewId": "userDetails",
+                    "viewLevel": 2
+                },
+                "notFoundTarget": {
+                    "viewName": "NotFound",
+                    "viewId": "notFound"
+                }
+            }
+        }
+    }
 }

@@ -13,8 +13,12 @@
         </script>
     <script>
         sap.ui.getCore().attachInit(function () {
-            new sap.ui.core.mvc.XMLView({
-                viewName: "lx.sapui5.demoapp.view.App"
+            new sap.ui.core.ComponentContainer({
+                name: "lx.sapui5.demoapp",
+                settings : {
+                    id : "demoapp"
+                },
+                async: true
             }).placeAt("content");
         });
     </script>
